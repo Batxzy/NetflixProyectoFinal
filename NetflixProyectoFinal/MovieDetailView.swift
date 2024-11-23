@@ -52,7 +52,7 @@ struct MovieDetailView: View {
                             .font(.callout)
 
                         Button(action: {
-                            videoView()
+                            NavigationLink (destination : videoView(videourl: movie.videoUrl))
                         }) {
                             Text("Watch")
                                 .font(.headline)

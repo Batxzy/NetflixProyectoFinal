@@ -9,17 +9,24 @@ import SwiftUI
 import AVKit
 
 struct videoView: View {
+    
+    let videourl: String
+    
     var body: some View {
-        let videoPath = Bundle.main.path(forResource: "video", ofType: "mp4")!
-        let videoURL = URL(fileURLWithPath: videoPath)
+        let url = GetVideoUrl()
         
-        VideoPlayer(player: AVPlayer(url: videoURL))
-            .frame(height: 300)
-            .cornerRadius(10)
-            .padding()
+        VideoPlayer(player: AVPlayer(url: url))
+                    
     }
+    
+    private func GetVideoUrl() -> URL {
+            guard let videoPath = Bundle.main.path(forResource: videourl, ofType: "mp4") else {
+                fatalError("Video file not found.")
+            }
+            return URL(fileURLWithPath: videoPath)
+        }
 }
 
 #Preview {
-    videoView()
+    videoView(videourl: moviesDos.videoUrl)
 }
