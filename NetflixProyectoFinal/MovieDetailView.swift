@@ -42,7 +42,7 @@ struct MovieDetailView: View {
                 }
 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 15) {
                         Text(movie.titulo)
                             .font(.largeTitle)
                             .fontWeight(.bold)
