@@ -115,6 +115,7 @@ var body: some View {
                     }
                     .scrollIndicators(.hidden)
                 }
+                .frame(maxHeight: .infinity, alignment: .top)
             }
             .preferredColorScheme(.dark)
         }

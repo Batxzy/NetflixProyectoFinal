@@ -30,7 +30,8 @@ struct Login: View {
         NavigationStack {
             Group {
                 if isLoggedIn {
-                    OnlyButtonView() // Vista que se muestra cuando el usuario está logueado
+                    Inicio_principal()
+                        .frame(maxHeight: .infinity)// Vista que se muestra cuando el usuario está logueado
                 } else {
                     loginView() // Vista de inicio de sesión
                 }
