@@ -44,7 +44,7 @@ var body: some View {
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: 15) {
                                         ForEach([moviesTopUno, moviesTopDos, moviesTopTres, moviesTopCuatro, moviesTopCinco, moviesTopSeis, moviesTopSiete, moviesTopOcho, moviesTopNueve, moviesTopDiez], id: \.titulo) { item in
-                                            NavigationLink(destination: MovieDetailView(movie: MoviesMovies(posterImageVertical: item.posterImageVertical, posterImageHorizontal: item.posterImageHorizontal, titulo: item.titulo, generos: item.generos, rating: item.rating, descripcion: item.descripcion))) {
+                                            NavigationLink(destination: MovieDetailView(movie: MoviesMovies(posterImageVertical: item.posterImageVertical, posterImageHorizontal: item.posterImageHorizontal, titulo: item.titulo, generos: item.generos, rating: item.rating, descripcion: item.descripcion, videoUrl: item.VideoURl))) {
                                                 Image(item.posterImageVertical)
                                                     .resizable()
                                                     .scaledToFill()
@@ -69,7 +69,7 @@ var body: some View {
                                     ScrollView(.horizontal, showsIndicators: false) {
                                         HStack(spacing: 15) {
                                             ForEach([seriesUno, seriesDos, seriesTres, seriesCuatro, seriesCinco], id: \.titulo) { item in
-                                                NavigationLink(destination: MovieDetailView(movie: MoviesMovies(posterImageVertical: item.posterImageVertical, posterImageHorizontal: item.posterImageHorizontal, titulo: item.titulo, generos: item.generos, rating: item.rating, descripcion: item.descripcion))) {
+                                                NavigationLink(destination: MovieDetailView(movie: MoviesMovies(posterImageVertical: item.posterImageVertical, posterImageHorizontal: item.posterImageHorizontal, titulo: item.titulo, generos: item.generos, rating: item.rating, descripcion: item.descripcion, videoUrl: item.VideoUrl))) {
                                                     Image(item.posterImageVertical)
                                                         .resizable()
                                                         .scaledToFill()
