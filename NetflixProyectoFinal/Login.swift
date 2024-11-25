@@ -35,6 +35,7 @@ struct Login: View {
                     loginView() // Vista de inicio de sesión
                 }
             }
+            .preferredColorScheme(.dark)
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Alerta"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }

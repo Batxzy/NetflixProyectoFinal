@@ -92,6 +92,7 @@ struct MovieDetailView: View {
             }
             .frame(maxHeight: .infinity, alignment: .topLeading)
         }
+        .preferredColorScheme(.dark)
         .frame(maxHeight: .infinity, alignment: .topLeading)
     }
 }

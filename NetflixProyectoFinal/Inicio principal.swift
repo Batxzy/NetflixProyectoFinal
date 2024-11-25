@@ -116,6 +116,7 @@ var body: some View {
                     .scrollIndicators(.hidden)
                 }
             }
+            .preferredColorScheme(.dark)
         }
     }
 }
