@@ -53,6 +53,18 @@ struct MovieDetailView: View {
                         Text(movie.descripcion)
                             .font(.callout)
                         
+                        NavigationLink(destination: videoView()) {
+                            Text("Watch")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding()
+                                .padding(.horizontal, 50)
+                                .background(Color.red)
+                                .cornerRadius(25)
+                                
+                        }
+                        .frame(maxWidth: .infinity,alignment: .center)
                         VStack(alignment: .leading, spacing: 15){
                             Text("Generos:")
                                 .font(.system(size: 23, weight: .medium))
