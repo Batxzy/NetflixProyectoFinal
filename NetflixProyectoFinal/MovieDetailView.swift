@@ -51,9 +51,7 @@ struct MovieDetailView: View {
                         Text(movie.descripcion)
                             .font(.callout)
 
-                        Button(action: {
-                            NavigationLink (destination : videoView(videourl: movie.videoUrl))
-                        }) {
+                        NavigationLink(destination: videoView(videourl: movie.videoUrl)) {
                             Text("Watch")
                                 .font(.headline)
                                 .fontWeight(.bold)
